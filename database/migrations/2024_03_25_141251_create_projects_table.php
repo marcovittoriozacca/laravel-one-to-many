@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name', 150)->unique();
             $table->text('description');
-            //category
             $table->string('link')->nullable();
             $table->string('slug');
 

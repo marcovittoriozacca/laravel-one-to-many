@@ -20,7 +20,6 @@ class ProjectSeeder extends Seeder
             Project::create([
                 "name" => $name,
                 "description" => fake()->sentence(rand(10,25), true),
-                //category
                 "link" => fake()->url(),
                 "proj_thumb" => fake()->imageUrl(),
                 "slug" => Str::slug($name, '-'),
