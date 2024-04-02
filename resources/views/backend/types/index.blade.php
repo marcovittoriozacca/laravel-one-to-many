@@ -41,11 +41,11 @@
                                             Modifica
                                         </a>
 
-                                        {{-- <button type="button" id="modal-btn" class="btn btn-danger" data-bs-toggle="modal"
-                                            data-slug="{{ $type->slug }}" data-path="projects"
+                                        <button type="button" id="modal-btn" class="btn btn-danger" data-bs-toggle="modal"
+                                            data-slug="{{ $type->slug }}" data-path="types"
                                             data-bs-target="#deleteModal">
                                             Elimina
-                                        </button> --}}
+                                        </button>
                                     </div>
 
                                 </td>
