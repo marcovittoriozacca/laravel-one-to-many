@@ -35,7 +35,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::resource('projects', ProjectController::class)->parameters(['projects' => 'project:slug']);
-    Route::resource('types', TypeController::class)->parameters(['types' => 'types:slug']);
+    Route::resource('types', TypeController::class)->parameters(['types' => 'type:slug']);
 });
 
 require __DIR__.'/auth.php';
