@@ -27,7 +27,26 @@
                 @enderror
             </div>
             
-            {{-- category --}}
+            <div class="mb-3">
+                <label for="type_id" class="form-label">Tipologia</label>
+                <select
+                    class="form-select @error ('type_id') is-invalid @enderror"
+                    name="type_id"
+                    id="type_id"
+                >
+                    <option selected value="">Seleziona una tipologia</option>
+                    @foreach ($types as $type)    
+                    <option value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+                    
+                </select>
+                @error ('type_id')
+                <div>
+                    <p class="text-danger">{{ $message }}</p>
+                </div>
+               @enderror 
+            </div>
+            
     
             <div class="mb-3">
                 <label for="link" class="form-label">Link al progetto</label>

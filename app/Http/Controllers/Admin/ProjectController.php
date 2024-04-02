@@ -6,6 +6,7 @@ use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
 use App\Http\Controllers\Controller;
+use App\Models\Type;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -26,7 +27,9 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('backend.projects.create');
+        $types = Type::all();
+
+        return view('backend.projects.create', compact('types'));
     }
 
     /**
@@ -60,7 +63,9 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('backend.projects.edit', compact('project'));
+        $types = Type::all();
+
+        return view('backend.projects.edit', compact('project', 'types'));
     }
 
     /**

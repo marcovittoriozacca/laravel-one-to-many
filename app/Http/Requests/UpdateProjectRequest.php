@@ -25,7 +25,7 @@ class UpdateProjectRequest extends FormRequest
         return [
             'name' => ['required', 'max:150', Rule::unique('projects', 'name')->ignore($this->route('project')->id)],
             'description' => ['required'],
-            //category
+            'type_id' => ['nullable', 'exists:types,id'],
             'link' => ['nullable'],
             'proj_thumb' => ['nullable', 'file', 'image', 'max:1000', 'mimes:jpg,jpeg,png,svg,webp,bmp,tif,tiff'],
         ];
@@ -38,7 +38,7 @@ class UpdateProjectRequest extends FormRequest
             'name.max' => 'La lungezza massima dei caratteri è di 150',
             'name.unique' => 'Questo nome è già stato utilizzato in precedenza',
             'description.required' => 'Il campo Descrizione è obbligatorio',
-            //category
+            'type_id.exists' => 'Questa tipologia non esiste/non è ammessa',
         ];
     }
 }
