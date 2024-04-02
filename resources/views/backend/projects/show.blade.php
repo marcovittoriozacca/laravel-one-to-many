@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <h1 class="card-title">{{ $project->name }}</h1>
                         <p class="card-text">{{ $project->description }}</p>
-                        <p class="card-text">{{ $project->category }}</p>
+                        {{-- category --}}
                         <a class="text-danger" href="{{ $project->link }}">
                             {{ $project->link }}
                         </a>

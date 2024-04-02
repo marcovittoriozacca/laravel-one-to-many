@@ -27,17 +27,7 @@
                 @enderror
             </div>
             
-            <div class="mb-3">
-                <label for="category" class="form-label">Categoria</label>
-                <input type="text" class="form-control @error ('category') is-invalid @enderror" name="category" id="category"
-                maxlength="50"
-                value="{{ old('category') }}"/>
-                @error ('category')
-                <div>
-                    <p class="text-danger">{{ $message }}</p>
-                </div>
-                @enderror
-            </div>
+            {{-- category --}}
     
             <div class="mb-3">
                 <label for="link" class="form-label">Link al progetto</label>

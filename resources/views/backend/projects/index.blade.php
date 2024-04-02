@@ -20,7 +20,7 @@
                             <th scope="col" class="text-capitalize">id</th>
                             <th scope="col" class="text-capitalize">nome progetto</th>
                             <th scope="col" class="text-capitalize">descrizione</th>
-                            <th scope="col" class="text-capitalize">tipologia</th>
+                            {{-- category --}}
                             <th scope="col" class="text-capitalize">link progetto</th>
                             <th scope="col" class="text-capitalize">slug</th>
                             <th scope="col" class="text-capitalize">immagine</th>
@@ -41,7 +41,7 @@
                                         {{ $project->description }}
                                     </p>
                                 </td>
-                                <td>{{ $project->category }}</td>
+                                {{-- category --}}
                                 <td>
                                     <a class="text-danger" href="{{ $project->link }}">
                                         {{ $project->link }}
