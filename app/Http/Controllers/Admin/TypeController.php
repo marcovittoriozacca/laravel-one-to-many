@@ -37,7 +37,7 @@ class TypeController extends Controller
         $val_data['slug'] = Str::slug($val_data['name'], '-');
 
         Type::create($val_data);
-        
+
         return redirect()->route('types.index');
     }
 
@@ -46,7 +46,7 @@ class TypeController extends Controller
      */
     public function show(Type $type)
     {
-        //
+        return view('backend.types.show', compact('type'));
     }
 
     /**
