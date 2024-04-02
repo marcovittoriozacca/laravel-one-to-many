@@ -12,7 +12,9 @@
                     <div class="card-body">
                         <h1 class="card-title">{{ $project->name }}</h1>
                         <p class="card-text">{{ $project->description }}</p>
-                        {{-- category --}}
+                        @if ($project->type)
+                            <p class="card-text fw-bold">{{ $project->type->name }}</p>
+                        @endif
                         <a class="text-danger" href="{{ $project->link }}">
                             {{ $project->link }}
                         </a>
